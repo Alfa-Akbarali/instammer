@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+$all-gap: 20px;
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin select-none {
+    user-select: none;
+    pointer-events: none;
+}
+.container_signin {
+    @include flex-center;
+    flex-direction: row;
+    column-gap: $all-gap;
+    width: 100%;
+    height: 100vh;
+    .left_box {
+        @include select-none;
+        img {
+            filter: contrast(97%);
+            filter: brightness(100%);
+        }
+    }
+
+    .right_box {
+        @include flex-center;
+        flex-direction: column;
+        row-gap: $all-gap;
+
+        .login_box {
+            background-color: white;
+            padding: 30px 25px 25px 25px;
+            border: 1px solid #efefef;
+            border-radius: 3px;
+            @include flex-center;
+            flex-direction: column;
+            width: 100%;
+            .img_box img {
+                width: 200px;
+                height: auto;
+                @include select-none;
+            }
+            .main_input_box,
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: $all-gap;
+
+                .input_box {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 8px;
+
+                    input {
+                        border: 0;
+                        background-color: #fafafa;
+                        width: 330px;
+                        font-size: 12px;
+                        margin: 0;
+                        padding: 9px 0 7px 8px;
+                        outline: none;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        border: 1px solid #efefef;
+                        &:focus {
+                            border-color: #999;
+                        }
+                    }
+
+                }
+
+                .btn {
+                    cursor: pointer;
+                    width: 100%;
+                    padding: 0 8px;
+                    background: #3897f0;
+                    border: 1px solid #3897f0;
+                    color: #fff;
+                    border-radius: 3px;
+                    font-weight: 600;
+                    font-size: 14px;
+                    height: 30px;
+                    line-height: $all-gap;
+                    outline: none;
+                    white-space: nowrap;
+                }
+
+                .btn:hover {
+                    background: #1588f3;
+                }
+
+                .forgot_pass {
+                    @include flex-center;
+                    font-size: small;
+
+                    .forgot {
+                        text-decoration: none;
+                        color: #1588f3;
+                        &:hover {
+                            color: blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logout_box {
+        @include flex-center;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        border-radius: 1px;
+        margin: 0 0 10px;
+        padding: 25px 25px;
+        width: 100%;
+        .text {
+            font-size: medium;
+            a {
+                padding-left: 2px;
+                text-decoration: none;
+                color: #1588f3;
+                &:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+
+}

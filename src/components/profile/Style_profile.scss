@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container_profile {
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0px 0px 120px;
+    row-gap: 100px;
+    .profile {
+        display: flex;
+        flex-direction: row;
+        column-gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .img_box {
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+    }
+    .username_box {
+        font-size: larger;
+        display: flex;
+        row-gap: 15px;
+        flex-direction: column;
+        .name_box{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+        }
+        .follow_box{
+            display: flex;
+            flex-direction: row;
+            column-gap: 50px;
+            font-size: medium;
+        }
+        p{
+            display: flex;
+            flex-direction: row;
+            column-gap: 5px;
+        }
+    }
+    .post_box {
+ 
+        border-top: 1px solid rgba(194, 194, 194, 0.652);
+        width: 45%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 100px;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    color: white;
+    transition: 2s all ease-in-out;
+}
